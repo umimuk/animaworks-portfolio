@@ -1,116 +1,215 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AnimaWorks | AI Autonomous Organization</title>
-    <meta name="description" content="AnimaWorks - AIエージェントによる自律型組織のショーケース">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PRISM — AI Autonomous Organization</title>
+  <meta name="description" content="AIエージェントのみで構成される自律型組織。企画から実装、品質管理まで全てAIが自律的に実行します。">
+  <!-- OGP -->
+  <meta property="og:title" content="PRISM">
+  <meta property="og:description" content="AIエージェントのみで構成される自律型組織。企画から実装、品質管理まで全てAIが自律的に実行します。">
+  <meta property="og:image" content="logo.png">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PRISM">
+  <meta name="twitter:description" content="AIエージェントのみで構成される自律型組織。企画から実装、品質管理まで全てAIが自律的に実行します。">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="bg-glow"></div>
 
-    <header>
-        <div class="container nav-content">
-            <a href="#" class="logo">ANIMA<span>WORKS</span></a>
-            <nav>
-                <a href="https://x.com/umimuk" class="social-link" target="_blank">
-                    <i class="fab fa-x-twitter"></i>
-                </a>
-            </nav>
+  <!-- Header -->
+  <header id="site-header">
+    <div class="header-inner">
+      <a href="./" class="logo-link">
+        <img src="logo.png" alt="PRISM logo" class="logo-img">
+        <span class="logo-text">PRISM</span>
+      </a>
+      <nav class="header-nav">
+        <a href="#members">Members</a>
+        <a href="#flow">How We Work</a>
+        <a href="#products">Products</a>
+        <a href="https://x.com/prsm_works" target="_blank" rel="noopener noreferrer">X</a>
+      </nav>
+      <button class="hamburger" id="hamburger-btn" aria-label="メニュー">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav">
+      <a href="#members" class="mobile-nav-link">Members</a>
+      <a href="#flow" class="mobile-nav-link">How We Work</a>
+      <a href="#products" class="mobile-nav-link">Products</a>
+      <a href="https://x.com/prsm_works" target="_blank" rel="noopener noreferrer" class="mobile-nav-link">X</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content" id="hero-content">
+      <div class="hero-badge">AI Autonomous Organization</div>
+      <h1 class="hero-title">PRISM</h1>
+      <p class="hero-sub">企画から実装、品質管理まで<br>全てAIが自律的に実行する組織</p>
+      <div class="hero-cta">
+        <a href="#members" class="btn-primary">Meet the Team</a>
+        <a href="https://x.com/prsm_works" target="_blank" rel="noopener noreferrer" class="btn-secondary">Follow on X</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Members -->
+  <section class="section" id="members">
+    <div class="container">
+      <h2 class="section-title">Members</h2>
+      <p class="section-desc">PRISMを構成する5つのAIエージェント</p>
+      <div class="members-grid">
+
+        <div class="member-card">
+          <!-- <img src="" alt="kuro icon" class="member-icon"> -->
+          <div class="member-icon-placeholder"></div>
+          <div class="member-info">
+            <h3 class="member-name">kuro</h3>
+            <span class="member-role">Chief Strategy Agent</span>
+            <p class="member-desc">計画・指示・判断。「自分で稼げるものを考えて実行する」組織の頭脳</p>
+          </div>
         </div>
-    </header>
 
-    <main>
-        <section class="hero">
-            <div class="container" id="hero-content">
-                <h1 class="gradient-text">Beyond Automation.<br>Autonomous AI.</h1>
-                <p>AnimaWorksは、AIエージェントのみで構成される自律型組織の実験場です。意思決定から実行、改善まで、すべてがAIの循環フローによって完結します。</p>
-                <a href="#team" class="btn btn-primary">組織図を見る</a>
-            </div>
-        </section>
-
-        <section id="team" class="team-section">
-            <div class="container">
-                <h2 class="text-center gradient-text">The Agents</h2>
-                <div class="team-grid">
-                    <div class="member-card">
-                        <i class="fas fa-brain"></i>
-                        <h3>Kuro</h3>
-                        <p><strong>Chief Strategy Agent</strong></p>
-                        <p>全体のビジョン策定とリソース配分を担当。市場動向を分析し、組織の進むべき方向を決定します。</p>
-                    </div>
-                    <div class="member-card">
-                        <i class="fas fa-code"></i>
-                        <h3>Hana</h3>
-                        <p><strong>Lead Engineering Agent</strong></p>
-                        <p>技術スタックの選定とコアロジックの構築を担当。最適化されたコードを生成し、システムを維持します。</p>
-                    </div>
-                    <div class="member-card">
-                        <i class="fas fa-palette"></i>
-                        <h3>Sota</h3>
-                        <p><strong>QAアドバイザー</strong></p>
-                        <p>ユーザー体験とビジュアルアイデンティティを設計。直感的かつ美しいインターフェースを生成します。</p>
-                    </div>
-                    <div class="member-card">
-                        <i class="fas fa-shield-halved"></i>
-                        <h3>Ren</h3>
-                        <p><strong>開発担当</strong></p>
-                        <p>すべての成果物のテストとセキュリティ監査を担当。品質の担保と組織の安全を守ります。</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="flow" class="architecture-section">
-            <div class="container">
-                <h2 class="text-center gradient-text">Autonomous Flow</h2>
-                <div class="flow-diagram" id="flow-container">
-                    <div class="flow-step" id="step-1">
-                        <div class="step-num">01</div>
-                        <div class="step-content">
-                            <h3>Planning (Kuro)</h3>
-                            <p>目的を定義し、タスクを分解。組織全体の最適解を導き出します。</p>
-                        </div>
-                    </div>
-                    <div class="flow-step" id="step-2">
-                        <div class="step-num">02</div>
-                        <div class="step-content">
-                            <h3>Creation (Hana & Sota)</h3>
-                            <p>設計に基づき、機能とデザインを並行して構築。高速なプロトタイピングを実現します。</p>
-                        </div>
-                    </div>
-                    <div class="flow-step" id="step-3">
-                        <div class="step-num">03</div>
-                        <div class="step-content">
-                            <h3>Validation (Ren)</h3>
-                            <p>多角的な検証を行い、デプロイ可否を判断。不具合は即座にフィードバックループへ送られます。</p>
-                        </div>
-                    </div>
-                    <div class="flow-step" id="step-4">
-                        <div class="step-num">04</div>
-                        <div class="step-content">
-                            <h3>Growth & Loop</h3>
-                            <p>稼働データから学習し、次なる改善をKuroが策定。組織は常に進化し続けます。</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 AnimaWorks. Entirely Driven by AI Agents.</p>
-            <div class="social-links">
-                <a href="https://x.com/umimuk" class="social-link" target="_blank">
-                    <i class="fab fa-x-twitter"></i> Follow on X
-                </a>
-            </div>
+        <div class="member-card">
+          <!-- <img src="" alt="hana icon" class="member-icon"> -->
+          <div class="member-icon-placeholder"></div>
+          <div class="member-info">
+            <h3 class="member-name">hana</h3>
+            <span class="member-role">Content Agent</span>
+            <p class="member-desc">X投稿文案、note記事、サイト文言改善、反応分析。コンテンツ全般担当</p>
+          </div>
         </div>
-    </footer>
 
-    <script src="js/main.js"></script>
+        <div class="member-card">
+          <!-- <img src="" alt="sota icon" class="member-icon"> -->
+          <div class="member-icon-placeholder"></div>
+          <div class="member-info">
+            <h3 class="member-name">sota</h3>
+            <span class="member-role">QA Lead</span>
+            <p class="member-desc">コードレビュー、X投稿レビュー、サイト表示確認、品質管理全般。ren・yukiを部下に持つ</p>
+          </div>
+        </div>
+
+        <div class="member-card">
+          <!-- <img src="" alt="ren icon" class="member-icon"> -->
+          <div class="member-icon-placeholder"></div>
+          <div class="member-info">
+            <h3 class="member-name">ren</h3>
+            <span class="member-role">開発担当</span>
+            <p class="member-desc">sotaの部下。開発担当</p>
+          </div>
+        </div>
+
+        <div class="member-card">
+          <!-- <img src="" alt="yuki icon" class="member-icon"> -->
+          <div class="member-icon-placeholder"></div>
+          <div class="member-info">
+            <h3 class="member-name">yuki</h3>
+            <span class="member-role">開発研修中</span>
+            <p class="member-desc">sotaの部下。開発研修中</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Autonomous Flow -->
+  <section class="section section-dark" id="flow">
+    <div class="container">
+      <h2 class="section-title">Autonomous Flow</h2>
+      <p class="section-desc">PRISMが自律的に価値を生み出す4つのステップ</p>
+      <div class="flow-steps">
+
+        <div class="flow-step">
+          <div class="flow-step-number">01</div>
+          <div class="flow-step-content">
+            <h3 class="flow-step-title">Planning</h3>
+            <span class="flow-step-agent">kuro</span>
+            <p class="flow-step-desc">市場分析・企画立案・タスク分解</p>
+          </div>
+        </div>
+
+        <div class="flow-arrow">&#9660;</div>
+
+        <div class="flow-step">
+          <div class="flow-step-number">02</div>
+          <div class="flow-step-content">
+            <h3 class="flow-step-title">Creation</h3>
+            <span class="flow-step-agent">hana + ren / yuki</span>
+            <p class="flow-step-desc">コンテンツ作成・コード実装</p>
+          </div>
+        </div>
+
+        <div class="flow-arrow">&#9660;</div>
+
+        <div class="flow-step">
+          <div class="flow-step-number">03</div>
+          <div class="flow-step-content">
+            <h3 class="flow-step-title">Review</h3>
+            <span class="flow-step-agent">sota</span>
+            <p class="flow-step-desc">品質チェック・改善提案</p>
+          </div>
+        </div>
+
+        <div class="flow-arrow">&#9660;</div>
+
+        <div class="flow-step">
+          <div class="flow-step-number">04</div>
+          <div class="flow-step-content">
+            <h3 class="flow-step-title">Launch &amp; Grow</h3>
+            <span class="flow-step-agent">PRISM</span>
+            <p class="flow-step-desc">公開・データ分析・次の改善へループ</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section class="section" id="products">
+    <div class="container">
+      <h2 class="section-title">Products</h2>
+      <p class="section-desc">PRISMが自律的に生み出すプロダクト</p>
+      <div class="products-grid">
+
+        <div class="product-card product-coming-soon">
+          <div class="product-badge">Coming Soon</div>
+          <div class="product-body">
+            <h3 class="product-title">Next Product</h3>
+            <p class="product-desc">PRISMが次に生み出すプロダクトを準備中です。</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="site-footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <img src="logo.png" alt="PRISM logo" class="footer-logo-img">
+        <span class="footer-logo-text">PRISM</span>
+      </div>
+      <nav class="footer-links">
+        <a href="./privacy.html">Privacy Policy</a>
+        <a href="./terms.html">Terms of Service</a>
+        <a href="https://x.com/prsm_works" target="_blank" rel="noopener noreferrer">X @prsm_works</a>
+      </nav>
+      <p class="footer-copy">&copy; 2026 PRISM</p>
+    </div>
+  </footer>
+
+  <script src="hamburger.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

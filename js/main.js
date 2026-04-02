@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Intersection Observer for Flow Steps
     const flowSteps = document.querySelectorAll('.flow-step');
-    
+
     const observerOptions = {
-        threshold: 0.5,
+        threshold: 0.4,
         rootMargin: '0px 0px -10% 0px'
     };
 
@@ -29,20 +29,29 @@ document.addEventListener('DOMContentLoaded', () => {
                     behavior: 'smooth'
                 });
             }
+            // Close mobile nav if open
+            const mobileNav = document.getElementById('mobile-nav');
+            if (mobileNav) {
+                mobileNav.classList.remove('open');
+            }
         });
     });
 
     // Header Scroll Effect
-    const header = document.querySelector('header');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.style.background = 'rgba(5, 7, 10, 0.9)';
-            header.style.padding = '1rem 0';
-        } else {
-            header.style.background = 'transparent';
-            header.style.padding = '1.5rem 0';
-        }
-    });
+    const header = document.getElementById('site-header');
+    if (header) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.style.background = 'rgba(10, 14, 23, 0.95)';
+                header.style.padding = '1rem 0';
+                header.style.borderBottom = '1px solid rgba(79, 195, 247, 0.15)';
+            } else {
+                header.style.background = 'transparent';
+                header.style.padding = '1.5rem 0';
+                header.style.borderBottom = 'none';
+            }
+        });
+    }
 
     // Hero Text Animation
     const heroContent = document.querySelector('#hero-content');
@@ -50,10 +59,20 @@ document.addEventListener('DOMContentLoaded', () => {
         heroContent.style.opacity = '0';
         heroContent.style.transform = 'translateY(20px)';
         heroContent.style.transition = 'all 1s ease-out 0.2s';
-        
+
         setTimeout(() => {
             heroContent.style.opacity = '1';
             heroContent.style.transform = 'translateY(0)';
         }, 100);
+    }
+
+    // Hamburger Menu
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const mobileNav = document.getElementById('mobile-nav');
+
+    if (hamburgerBtn && mobileNav) {
+        hamburgerBtn.addEventListener('click', () => {
+            mobileNav.classList.toggle('open');
+        });
     }
 });

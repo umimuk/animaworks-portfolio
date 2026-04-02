@@ -3,48 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>プライバシーポリシー｜いとのポートフォリオ</title>
+  <title>プライバシーポリシー｜PRISM</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #a0e8ff;
-      --primary-dark: #64b5f6;
-      --text: #2c3e50;
-      --text-secondary: #7f8c8d;
-      --bg: #f5f9fc;
-      --bg-card: #ffffff;
-      --border: #d0eaf5;
+      --bg: #0a0e17;
+      --bg-card: #111827;
+      --border: rgba(79, 195, 247, 0.2);
+      --text: #e8eaf6;
+      --text-secondary: #8892a4;
+      --accent: #4fc3f7;
+      --accent-gradient: linear-gradient(135deg, #4fc3f7, #9c27b0, #e91e63, #4caf50);
     }
 
-    * {
+    *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
     body {
-      font-family: 'Noto Sans JP', 'Hiragino Sans', 'Meiryo', sans-serif;
+      font-family: 'M PLUS 1', 'Noto Sans JP', 'Hiragino Sans', sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.8;
     }
 
     header {
-      background: linear-gradient(135deg, #a0e8ff 0%, #c8f2ff 100%);
-      color: var(--text);
-      padding: 32px 24px;
+      background: rgba(10, 14, 23, 0.95);
+      border-bottom: 1px solid var(--border);
+      padding: 28px 24px;
       text-align: center;
     }
 
     header h1 {
-      font-size: 1.6rem;
+      font-size: 1.5rem;
       font-weight: 700;
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
     header a {
-      color: var(--text);
+      color: var(--accent);
       text-decoration: none;
       font-size: 0.9rem;
       display: inline-block;
@@ -52,7 +56,7 @@
     }
 
     header a:hover {
-      color: #1a252f;
+      opacity: 0.8;
     }
 
     main {
@@ -75,13 +79,13 @@
     }
 
     h2 {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       font-weight: 700;
-      color: #64b5f6;
+      color: var(--accent);
       margin-top: 32px;
       margin-bottom: 10px;
       padding-left: 10px;
-      border-left: 3px solid #64b5f6;
+      border-left: 3px solid var(--accent);
     }
 
     p {
@@ -100,12 +104,12 @@
     }
 
     a {
-      color: var(--primary);
+      color: var(--accent);
     }
 
     footer {
-      background: linear-gradient(135deg, #7dcef5 0%, #a0e8ff 100%);
-      color: var(--text);
+      background: #060a11;
+      border-top: 1px solid var(--border);
       text-align: center;
       padding: 28px 24px;
     }
@@ -119,18 +123,19 @@
     }
 
     .footer-links a {
-      color: var(--text);
+      color: var(--text-secondary);
       text-decoration: none;
       font-size: 0.9rem;
     }
 
     .footer-links a:hover {
-      color: #1a252f;
+      color: var(--accent);
     }
 
     .footer-copy {
       font-size: 0.85rem;
-      opacity: 0.65;
+      color: var(--text-secondary);
+      opacity: 0.6;
     }
 
     @media (max-width: 768px) {
@@ -144,14 +149,14 @@
 
   <header>
     <h1>プライバシーポリシー</h1>
-    <a href="./">← いとのポートフォリオ トップへ</a>
+    <a href="./">&#8592; PRISM トップへ</a>
   </header>
 
   <main>
     <div class="card">
       <p class="updated">制定日：2024年1月1日</p>
 
-      <p>いとのポートフォリオ（以下「当サイト」）は、ユーザーのプライバシーを尊重し、個人情報の保護に努めます。本プライバシーポリシーは、当サイトにおける個人情報の取り扱いについて定めるものです。</p>
+      <p>PRISM（以下「当サイト」）は、ユーザーのプライバシーを尊重し、個人情報の保護に努めます。本プライバシーポリシーは、当サイトにおける個人情報の取り扱いについて定めるものです。</p>
 
       <h2>1. 収集する情報</h2>
       <p>当サイトでは、以下の情報を収集する場合があります。</p>
@@ -194,9 +199,7 @@
 
       <h2>8. お問い合わせ</h2>
       <p>プライバシーポリシーに関するお問い合わせは、X（旧Twitter）にてご連絡ください。</p>
-      <p><a href="https://x.com/ito_itoai" target="_blank" rel="noopener noreferrer">@ito_itoai</a></p>
-
-      <p style="margin-top: 32px;"><a href="./tokushoho.html">特定商取引法に基づく表記</a></p>
+      <p><a href="https://x.com/prsm_works" target="_blank" rel="noopener noreferrer">@prsm_works</a></p>
     </div>
   </main>
 
@@ -204,9 +207,9 @@
     <nav class="footer-links">
       <a href="./privacy.html">Privacy Policy</a>
       <a href="./terms.html">Terms of Service</a>
-      <a href="https://x.com/ito_itoai" target="_blank" rel="noopener noreferrer">Contact (@ito_itoai)</a>
+      <a href="https://x.com/prsm_works" target="_blank" rel="noopener noreferrer">X @prsm_works</a>
     </nav>
-    <p class="footer-copy">&copy; 2026 ito. All rights reserved.</p>
+    <p class="footer-copy">&copy; 2026 PRISM</p>
   </footer>
 
 </body>
